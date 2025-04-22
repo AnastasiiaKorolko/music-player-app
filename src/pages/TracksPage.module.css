@@ -1,0 +1,97 @@
+.tracksPageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.tracksList {
+  margin-top: 20px;
+}
+
+.loading, 
+.error, 
+.noTracks {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 18px;
+}
+
+.loading {
+  color: #666;
+}
+
+.error {
+  color: #ff3333;
+}
+
+.noTracks {
+  color: #666;
+  font-style: italic;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.paginationButton {
+  padding: 8px 15px;
+  background-color: #ee7c03;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.paginationButton:hover {
+  padding: 8px 15px;
+  background-color: #a15504;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.paginationButton:disabled {
+  background-color: #4f4235;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 14px;
+  color: #666;
+}
+
+.playAllButton {
+  display: flex;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #bd5c07;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.playAllButton svg{
+  margin-right: 10px;
+}
+.playAllButton:hover {
+  background-color: #764519;
+  transform: scale(1.05);
+}
+
+.allButtonActive {
+  transform: scale(0.95);
+  color: #764519;
+  background: rgb(195, 194, 194);
+  box-shadow:
+    inset 0 4px 6px rgba(0, 0, 0, 0.3),
+    0 6px 15px rgba(0, 0, 0, 0.3);
+
+}

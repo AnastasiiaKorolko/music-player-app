@@ -1,0 +1,318 @@
+.trackItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+  transition: background 0.8s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, #110c07 30%, #2d1d0c);
+  transition: all 0.3s ease;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.trackItem::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 215, 160, 0);
+  transition: background 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+ .trackItem:hover::after {
+  background: rgba(255, 215, 160, 0.1); 
+} 
+
+.trackItemPlaying {
+  background: rgba(173, 118, 74, 0.2); 
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(36, 21, 1, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+
+.coverImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.coverImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trackInfo {
+  flex: 2;
+}
+
+.trackInfo h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.trackInfo p {
+  margin: 0 0 5px 0;
+  color: rgb(149, 131, 100);
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.genre {
+  background-color: #bd5c07;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.audioPlayer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  flex-grow: 2;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.accessories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.audioPlayer audio {
+  width: 100%;
+}
+
+.uploadButton {
+  display: inline-block;
+  border: 1px solid #bd5c07;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 6px 15px rgba(68, 48, 7, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease ;
+}
+
+.uploadButton:hover {
+  background-color: #bd5c07;
+  transform: scale(1.1);
+  border: none;
+}
+
+.removeFileBtn {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.removeFileBtn:hover {
+  background-color: #4c2606;
+  color: #fff;
+}
+
+.removeFileBtn:active {
+  transform: scale(0.95);
+}
+
+.removeFileBtn svg {
+  fill: rgba(13, 8, 4, 0.5);
+  margin-top: 5px;
+}
+.removeFileBtn svg:hover {
+  fill: rgb(255, 255, 255);
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.editButton,
+.deleteButton {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 20px;
+  color: rgb(149, 131, 100);
+  padding: 10px 30px;
+  transition: background 0.3s ease, color 0.4s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.editButton {
+  background: linear-gradient(165deg, #0d0804 30%, #77430b);
+  color: rgb(149, 131, 100);
+  transition: transform 0.3s ease;
+}
+
+.deleteButton {
+  background: linear-gradient(165deg, #77430b 30%, #150e06);
+  transition: transform 0.3s ease;
+}
+
+.editButton:hover {
+  background: linear-gradient(165deg, #e19c52 30%, #59330e);
+  color: #0d0804;
+  transform: scale(1.1);
+}
+
+.deleteButton:hover {
+  background: linear-gradient(165deg, #9f682e 30%, #150e06);
+  color: #000000;
+  transform: scale(1.1);
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #3f3f3d;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+.timeText {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.buttonActions {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #bd5c07;
+  padding: 10px 10px;
+  transition: background 0.3s ease, color 0.4s ease, transform 0.3s ease;;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
+}
+.buttonActions:hover {
+  background-color: #764519;
+  color: #0d0804;
+  transform: scale(1.1);
+}
+
+.playing {
+  color: #764519;
+  background: rgb(195, 194, 194);
+  box-shadow:
+    inset 0 4px 6px rgba(0, 0, 0, 0.3),
+    0 6px 15px rgba(0, 0, 0, 0.3);   
+}
+
+.paused {
+  background-color: #ae5b13;
+  box-shadow: 0 4px 6px rgba(101, 59, 4, 0.5);
+}
+
+.loopButton {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ae5b13;
+  transition: all 0.2s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.loopButton:active {
+  transform: scale(0.95);
+  background-color: #fca95f;
+  box-shadow: 
+    inset 0 6px 8px rgba(98, 54, 0, 0.5), 
+    0 8px 20px rgba(140, 54, 1, 0.5);
+}
+.loopButton:hover {
+  background-color: #764519;
+}
+
+.loopButton .activeIcon {
+  color: rgb(255, 255, 255);
+  transform: scale(0.95);
+}
+
+.loopButton .inactiveIcon {
+  color: rgb(158, 157, 157);
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .trackItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .coverImage {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .audioPlayer, .actions {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 769px) {
+  .audioPlayer audio {
+    max-width: 400px;
+  }
+}
